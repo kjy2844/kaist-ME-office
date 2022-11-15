@@ -8,6 +8,7 @@ class FindByWork extends StatefulWidget {
 }
 
 class _FindByWorkState extends State<FindByWork> {
+  // TODO: 한, 영, 담장자 이름을 가지는 class 만들기
   List<String> works = [
     "강의실 비품/주차시스쳄/우편물",
     "고정자산",
@@ -44,13 +45,15 @@ class _FindByWorkState extends State<FindByWork> {
           title: Text('find by work page'),
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Text('left'),
+            Image(image: AssetImage('images/seat_before_example.png')),
+            SizedBox(
+              width: 30,
             ),
             Container(
               width: 700,
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
               child: ListView.separated(
                 scrollDirection: Axis.vertical,
                 itemCount: works.length,
@@ -82,33 +85,43 @@ class WorkListTile extends StatefulWidget {
 }
 
 class _WorkListTileState extends State<WorkListTile> {
+  bool isClicked = false;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 59,
-      width: 479,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(
-          color: Color(0xFFD9D9D9),
-          width: 2,
+    return InkWell(
+      onTap: () {
+        setState(() {
+          // TODO: 이벤트로 위쪽에 이 위젯이 클릭되었다는 것을 전달 or 이 위젯을 여기서 InkWell로 감싸지 말고 상위 위젯에서 감쌀수도 있을 듯
+          isClicked = !isClicked;
+        });
+      },
+      child: Container(
+        alignment: Alignment.center,
+        height: 59,
+        width: 479,
+        decoration: BoxDecoration(
+          color: isClicked ? Colors.blue : Colors.white,
+          border: Border.all(
+            color: Color(0xFFD9D9D9),
+            width: 2,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xCFD9D9D9),
+              blurRadius: 10.0, // soften the shadow
+              spreadRadius: 0.0, //extend the shadow
+              offset: Offset(
+                4.0, // Move to right horizontally
+                4.0, // Move to bottom Vertically
+              ),
+            )
+          ],
         ),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0xCFD9D9D9),
-            blurRadius: 10.0, // soften the shadow
-            spreadRadius: 0.0, //extend the shadow
-            offset: Offset(
-              4.0, // Move to right horizontally
-              4.0, // Move to bottom Vertically
-            ),
-          )
-        ],
-      ),
-      child: Text(
-        widget.title,
-        style: TextStyle(fontSize: 24),
+        child: Text(
+          widget.title,
+          style: TextStyle(fontSize: 24),
+        ),
       ),
     );
   }
