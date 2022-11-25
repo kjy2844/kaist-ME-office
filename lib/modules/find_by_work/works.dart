@@ -35,7 +35,29 @@ class Works {
     Work("BK21/전문연구요원", ["기계과"]),
   ];
 
+  int clicked = -1;
+
   List<Work> getWorks() {
     return this.worksWithPeople;
+  }
+
+  void click(int index) {
+    if (this.clicked == index) {
+      this.clicked = -1;
+    } else {
+      this.clicked = index;
+    }
+  }
+
+  bool isClicked(int index) {
+    return this.clicked == index;
+  }
+
+  String getImagePath() {
+    if (this.clicked == -1) {
+      return 'images/seat_before_example.png';
+    } else {
+      return 'images/seat_after_example.png';
+    }
   }
 }

@@ -13,15 +13,6 @@ class FindByWork extends StatefulWidget {
 class _FindByWorkState extends State<FindByWork> {
   // TODO: 한, 영, 담장자 이름을 가지는 class 만들기
   List<Work> worksWithPeople = works.getWorks();
-  int clicked = -1;
-
-  String getImagePath() {
-    if (clicked == -1) {
-      return 'images/seat_before_example.png';
-    } else {
-      return 'images/seat_after_example.png';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +23,7 @@ class _FindByWorkState extends State<FindByWork> {
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(getImagePath())),
+            Image(image: AssetImage(works.getImagePath())),
             SizedBox(
               width: 30,
             ),
@@ -45,13 +36,9 @@ class _FindByWorkState extends State<FindByWork> {
                 itemBuilder: (context, index) {
                   return WorkListTile(
                     title: worksWithPeople[index].title,
-                    color: clicked == index ? Colors.blue : Colors.white,
+                    color: works.isClicked(index) ? Colors.blue : Colors.white,
                     click: () => setState(() {
-                      if (clicked == index) {
-                        clicked = -1;
-                      } else {
-                        clicked = index;
-                      }
+                      works.click(index);
                     }),
                   );
                 },
