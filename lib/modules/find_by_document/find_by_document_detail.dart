@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import './works.dart';
+import './documents.dart';
 import '../common/basic_tile.dart';
 
-Works works = Works();
+Documents documents = Documents();
 
-class FindByWork extends StatefulWidget {
-  const FindByWork({Key? key}) : super(key: key);
+class FindByDocumentDetail extends StatefulWidget {
+  const FindByDocumentDetail({Key? key}) : super(key: key);
 
   @override
-  State<FindByWork> createState() => _FindByWorkState();
+  State<FindByDocumentDetail> createState() => _FindByDocumentDetailState();
 }
 
-class _FindByWorkState extends State<FindByWork> {
+class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
   // TODO: 한, 영, 담장자 이름을 가지는 class 만들기
-  List<Work> worksWithPeople = works.getWorks();
+  List<Document> documentsWithPeople = documents.getDocuments();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class _FindByWorkState extends State<FindByWork> {
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(works.getImagePath())),
+            Image(image: AssetImage(documents.getImagePath())),
             SizedBox(
               width: 30,
             ),
@@ -33,13 +33,14 @@ class _FindByWorkState extends State<FindByWork> {
               margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
               child: ListView.separated(
                 scrollDirection: Axis.vertical,
-                itemCount: worksWithPeople.length,
+                itemCount: documentsWithPeople.length,
                 itemBuilder: (context, index) {
                   return BasicTile(
-                    title: worksWithPeople[index].title,
-                    color: works.isClicked(index) ? Colors.blue : Colors.white,
+                    title: documentsWithPeople[index].title,
+                    color:
+                        documents.isClicked(index) ? Colors.blue : Colors.white,
                     click: () => setState(() {
-                      works.click(index);
+                      documents.click(index);
                     }),
                   );
                 },

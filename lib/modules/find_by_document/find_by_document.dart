@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:me_office/modules/common/basic_tile.dart';
+import 'package:me_office/modules/find_by_document/criteria.dart';
+
+Criteria criteria = Criteria();
 
 class FindByDocument extends StatefulWidget {
   const FindByDocument({Key? key}) : super(key: key);
@@ -8,6 +12,8 @@ class FindByDocument extends StatefulWidget {
 }
 
 class _FindByDocumentState extends State<FindByDocument> {
+  List<String> criteriaList = criteria.getCriteria();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +21,29 @@ class _FindByDocumentState extends State<FindByDocument> {
         title: Text('find by document page'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
+        child: Container(
+          padding: EdgeInsets.all(90.0),
+          child: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4,
+              mainAxisExtent: 150,
+              mainAxisSpacing: 30,
+              crossAxisSpacing: 20,
+            ),
+            itemCount: criteriaList.length,
+            itemBuilder: (BuildContext context, int index) {
+              return BasicTile(
+                  title: criteriaList[index],
+                  color: criteria.isClicked(index) ? Colors.blue : Colors.white,
+                  click: () {
+                    setState(() {
+                      criteria.click(index);
+                    });
+                    // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
+                    Navigator.pushNamed(context, '/find-by-document-detail');
+                  });
+            },
+          ),
         ),
       ),
     );
