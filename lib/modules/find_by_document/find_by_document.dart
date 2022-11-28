@@ -40,7 +40,8 @@ class _FindByDocumentState extends State<FindByDocument> {
                       criteria.click(index);
                     });
                     // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
-                    Navigator.pushNamed(context, '/find-by-document-detail');
+                    Navigator.pushNamed(context, '/find-by-document-detail',
+                        arguments: criteria);
                   });
             },
           ),

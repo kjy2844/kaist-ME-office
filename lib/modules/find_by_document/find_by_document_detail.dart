@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:me_office/modules/find_by_document/criteria.dart';
 import './documents.dart';
 import '../common/basic_tile.dart';
 
@@ -17,9 +18,13 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
 
   @override
   Widget build(BuildContext context) {
+    final criteria = ModalRoute.of(context)!.settings.arguments as Criteria;
+    int clickedIndex = criteria.clicked;
+    String clickedLabel = criteria.getCriteria()[clickedIndex];
+
     return Scaffold(
         appBar: AppBar(
-          title: Text('find by work page'),
+          title: Text('find by work page $clickedLabel'),
         ),
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
