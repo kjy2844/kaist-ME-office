@@ -17,6 +17,8 @@ class _FindByWorkState extends State<FindByWork> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> imagePaths = works.getImagePaths();
+
     return FutureBuilder(
         future: worksWithPeople,
         builder: (context, snapshot) {
@@ -33,7 +35,19 @@ class _FindByWorkState extends State<FindByWork> {
                 body: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image(image: AssetImage(works.getImagePath())),
+                    Container(
+                      width: 700,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: List<Widget>.generate(
+                          imagePaths.length,
+                          (index) => Flexible(
+                              fit: FlexFit.loose,
+                              child:
+                                  Image(image: AssetImage(imagePaths[index]))),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       width: 30,
                     ),

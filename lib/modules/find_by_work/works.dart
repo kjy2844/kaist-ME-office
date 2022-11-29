@@ -3,14 +3,27 @@ import 'dart:convert';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 
+class People {
+  String name;
+  String image;
+
+  People(this.name, this.image);
+
+  factory People.fromJson(Map<String, dynamic> json) {
+    return People(json['name'], json['image']);
+  }
+}
+
 class Work {
   String title;
-  List<String> people;
+  List<People> people;
 
   Work(this.title, this.people);
 
   factory Work.fromJson(Map<String, dynamic> json) {
-    return Work(json['title'], List<String>.from(json['people']));
+    List<People> peopleList =
+        json['people'].map<People>((json) => People.fromJson(json)).toList();
+    return Work(json['title'], peopleList);
   }
 }
 
@@ -57,15 +70,15 @@ class Works {
     return this.clicked == index;
   }
 
-  String getImagePath() {
+  List<String> getImagePaths() {
     if (this.clicked == -1) {
-      return 'images/seat_before_example.png';
+      return ['images/seat_before_example.png'];
     } else {
-      if (this.worksWithPeople[this.clicked].people[0].compareTo('강성중') == 0) {
-        return 'images/kang_seong_jung.png';
-      } else {
-        return 'images/seat_after_example.png';
-      }
+      return this
+          .worksWithPeople[this.clicked]
+          .people
+          .map((e) => 'images/' + e.image)
+          .toList();
     }
   }
 }

@@ -1,110 +1,114 @@
 [
   {
     "title": "강의실 비품/주차시스템/우편물",
-    "people": ["조예솔"]
+    "people": [{"name": "조예솔", "image":  "cho_yesol.png"}]
   },
   {
     "title": "고정자산",
-    "people": ["강성중", "주정만"]
+    "people": [{"name": "강성중", "image":  "kang_seongjung.png"},
+      {"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
     "title": "공동장비",
-    "people": ["강성중", "여상은"]
+    "people": [{"name": "강성중", "image":  "kang_seongjung.png"},
+      {"name": "여상은", "image":  "yeo_sangeun.png"}]
   },
   {
     "title": "교과과정/수업/조교",
-    "people": ["구도영"]
+    "people": [{"name": "구도영", "image":  "ku_doyoung.png"}]
   },
   {
     "title": "교원인사",
-    "people": ["김향미"]
+    "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "국제협력/복수학위",
-    "people": ["범진웅"]
+    "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "기계 가공실(범용선반, 밀링, 드릴링 머신, 밴드쏘)",
-    "people": ["강성중"]
+    "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
     "title": "대학원 입시/박사자격시험",
-    "people": ["석은미"]
+    "people": [{"name": "석은미", "image":  "seok_eunmi.png"}]
   },
   {
     "title": "대학원 제작실(드릴링 머신, 3D 프린터)",
-    "people": ["여상은", "한동희"]
+    "people": [{"name": "여상은", "image":  "yeo_sangeun.png"},
+      {"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
     "title": "산학협력",
-    "people": ["박신애"]
+    "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
     "title": "석박사과정/학위논문",
-    "people": ["이동현"]
+    "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "시설(N25)",
-    "people": ["주정만"]
+    "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
     "title": "시설(N7)",
-    "people": ["여상은", "한동희"]
+    "people": [{"name": "여상은", "image":  "yeo_sangeun.png"},
+      {"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
     "title": "시설(N9)",
-    "people": ["강성중"]
+    "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
     "title": "연구비",
-    "people": ["김단희"]
+    "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "연구실 안전관리",
-    "people": ["한동희"]
+    "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
     "title": "출장/카드키/세미나실",
-    "people": ["임수지"]
+    "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "학부 제작실(소형선반, 밀링, 드릴링 머신, 밴드쏘)",
-    "people": ["주정만"]
+    "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
     "title": "학부실험실습(기계가공, 기계공학실험)",
-    "people": ["강성중"]
+    "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
     "title": "학부실험실습(기계제도)",
-    "people": ["여상은"]
+    "people": [{"name": "여상은", "image":  "yeo_sangeun.png"}]
   },
   {
     "title": "학부실험실습(자동제어, 시모제)",
-    "people": ["한동희"]
+    "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
     "title": "학부실험실습(창시구, 공학설계메카, 응용전자공학)",
-    "people": ["주정만"]
+    "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
     "title": "학사과정/학생포상/장학/별정직",
-    "people": ["백수경"]
+    "people": [{"name": "백수경", "image":  "baek_sukyoung.png"}]
   },
   {
     "title": "홍보",
-    "people": ["정효윤"]
+    "people": [{"name": "정효윤", "image":  "jung_hyoyoon.png"}]
   },
   {
     "title": "3D 프린터 및 레이저 가공실",
-    "people": ["주정만"]
+    "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
     "title": "A/V System",
-    "people": ["한동희"]
+    "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
     "title": "BK21/전문연구요원",
-    "people": ["박은혜"]
+    "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   }
 ]
