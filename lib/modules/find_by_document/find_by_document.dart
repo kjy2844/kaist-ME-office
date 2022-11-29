@@ -12,7 +12,7 @@ class FindByDocument extends StatefulWidget {
 }
 
 class _FindByDocumentState extends State<FindByDocument> {
-  List<String> criteriaList = criteria.getCriteria();
+  List<Criterion> criteriaList = criteria.getCriteria();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _FindByDocumentState extends State<FindByDocument> {
             itemCount: criteriaList.length,
             itemBuilder: (BuildContext context, int index) {
               return BasicTile(
-                  title: criteriaList[index],
+                  title: criteriaList[index].title,
                   color: criteria.isClicked(index) ? Colors.blue : Colors.white,
                   click: () {
                     setState(() {

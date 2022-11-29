@@ -14,16 +14,18 @@ class FindByDocumentDetail extends StatefulWidget {
 
 class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
   // TODO: 한, 영, 담장자 이름을 가지는 class 만들기
-  Future<List<Document>> documentsWithPeople = documents.getDocuments();
+  // Future<List<Document>> documentsWithPeople = documents.getDocuments();
 
   @override
   Widget build(BuildContext context) {
     final criteria = ModalRoute.of(context)!.settings.arguments as Criteria;
     int clickedIndex = criteria.clicked;
-    String clickedLabel = criteria.getCriteria()[clickedIndex];
+    Criterion criterion = criteria.getCriterion(clickedIndex);
+    String clickedLabel = criterion.title;
 
     return FutureBuilder(
-        future: documentsWithPeople,
+        future: documents.getDocuments(
+            clickedIndex, criterion.start, criterion.end),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(

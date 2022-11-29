@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:me_office/modules/find_by_document/criteria.dart';
 
 class Document {
   String title;
@@ -18,13 +19,28 @@ class Documents {
 
   int clicked = -1;
 
-  Future<List<Document>> getDocuments() async {
+  Future<List<Document>> getDocuments(
+      int index, String start, String end) async {
     final String response =
         await rootBundle.loadString('json/documents_data.json');
     final data = json.decode(response).cast<Map<String, dynamic>>();
 
-    documentsWithPeople =
-        data.map<Document>((json) => Document.fromJson(json)).toList();
+    if (index == 7) {
+      this.documentsWithPeople = data
+          .map<Document>((json) => Document.fromJson(json))
+          .where((element) =>
+              start.compareTo(element.title[0]) > 0 ||
+              end.compareTo(element.title[0]) < 0)
+          .toList();
+    } else {
+      this.documentsWithPeople = data
+          .map<Document>((json) => Document.fromJson(json))
+          .where((element) =>
+              start.compareTo(element.title[0]) <= 0 &&
+              end.compareTo(element.title[0]) >= 0)
+          .toList();
+    }
+
     return this.documentsWithPeople;
   }
 
