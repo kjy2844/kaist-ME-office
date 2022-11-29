@@ -1,18 +1,8 @@
 import 'dart:convert';
+import 'package:me_office/modules/common/people.dart';
 
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
-
-class People {
-  String name;
-  String image;
-
-  People(this.name, this.image);
-
-  factory People.fromJson(Map<String, dynamic> json) {
-    return People(json['name'], json['image']);
-  }
-}
 
 class Work {
   String title;

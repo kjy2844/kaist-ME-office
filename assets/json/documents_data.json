@@ -1,326 +1,326 @@
 [
   {
     "title": "가족채용제한여부확인서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "강의면제 신청서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "결격사유 조회 동의서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "겸임교수 임용신청원",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교과목(변경.신설)신청서",
-  "people": ["구도영"]
+  "people": [{"name": "구도영", "image":  "ku_doyoung.png"}]
   },
   {
     "title": "교수 인사 심의자료(승진)",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교수 인사 심의자료(재임용)",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교수 인사 심의자료(정년보장)",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교수신규임용평가서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교원 겸직근무 신청서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "교원 창업사업계획서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "구매요청 신청서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "국내/외전문가활용신청서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "국내출장 증빙",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "국내출장신청서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "국비 석·박사 TA활동 참여신청서",
-  "people": ["구도영"]
+  "people": [{"name": "구도영", "image":  "ku_doyoung.png"}]
   },
   {
     "title": "국외출장 복명서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "국외출장신청서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "국제협력사업 신청서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "국제협력사업 실적 보고서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "국제협력사업 실적 총괄표",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "국제협력사업비 집행실적 중간점검 보고서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "기 선정 Signtature Project 국제협력사업 계획서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "다수인 공저시 기여도 의견서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사과정 자격시험 응시원",
-  "people": ["석은미"]
+  "people": [{"name": "석은미", "image":  "seok_eunmi.png"}]
   },
   {
     "title": "박사학위논문 사전검토의견서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위논문 심사위원 위촉 요청서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위논문계획서 심사 지연 경위서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위논문계획서 심사결과 보고서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위논문계획서 평가의견서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위청구논문 심사 요청서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위청구논문 심사결과 및 종합시험결과 보고서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "박사학위청구논문 심사결과 및 종합시험결과 심사요지",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "법인카드미사용사유서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "복수학위과정 해외대학에서의 수학(연구) 계획서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "비위면직자 취업제한 관련 체크리스트",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "비전임직.연구교원 임용지원서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "비전임직.연구교원 활용계획서(활용교수 작성)",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "비전임직교원(연구교원) 입원원서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "비전임직교원(초빙/겸직/방문) 입원원서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "석사학위논문계획서 심사결과 보고서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "석사학위논문계획서 제출지체 사유서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "석사학위청구논문 심사결과 보고서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "성범죄 경력조회 동의서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "세미나 개최 신청서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "세미나개최보고서(BK21)",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "세미나개최신청서(BK21)",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "시설사용 신청서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "심사용 논문",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "연구연가 결과보고서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "연구연가 신청서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "외부인 출장 신청서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "인쇄학위논문 비공개 확인서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "인턴십 결과보고서(ME Co-op)",
-  "people": ["박신애"]
+  "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
     "title": "인턴십 프로그램 참가 신청서(ME Co-op)",
-  "people": ["박신애"]
+  "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
     "title": "일반비용 지급신청서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "장/단기해외연수 결과보고서",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "장/단기해외연수 신청서",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "재입학원",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "재학년한 연장 신청서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "전문가활용보고서(BK21)",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "전문가활용신청서(BK21)",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "전문연구요원 서류",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title": "전임직교원 신규임용지원서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "전임직교원 입원원서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "전자학위논문 이용 동의서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "졸업예정증명서 발급신청서(학사과정)",
-  "people": ["백수경"]
+  "people": [{"name": "백수경", "image":  "baek_sukyoung.png"}]
   },
   {
     "title": "지도교수 및 학과장 추천서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "직접구매 지급신청서",
-  "people": ["김단희"]
+  "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
     "title": "체재지 도착신고서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "최종발표 논문심사료 청구서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "출장비용 지급신청서",
-  "people": ["임수지"]
+  "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
     "title": "타대학(원)취득학점인정원",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "학생 과외활동 신청서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "학위수여 예정확인서 발급신청서",
-  "people": ["이동현"]
+  "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
     "title": "해외석학초빙 지원사업 계획 및 사업신청서",
-  "people": ["김향미"]
+  "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
     "title": "BK국내특허 출원(등록) 신청서",
-  "people": ["박은혜"]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   },
   {
     "title" : "KAIST 외국협력대학 파견학생 서약서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
     "title": "ME Co-op 프로그램 중간 점검서",
-  "people": ["박신애"]
+  "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
     "title": "ME Co-op 프로그램 참가 신청서",
-  "people": ["박신애"]
+  "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
     "title": "Signature Project 국제협력 사업 신청서",
-  "people": ["범진웅"]
+  "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   }
 ]

@@ -23,6 +23,8 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
     Criterion criterion = criteria.getCriterion(clickedIndex);
     String clickedLabel = criterion.title;
 
+    List<String> imagePaths = documents.getImagePaths();
+
     return FutureBuilder(
         future: documents.getDocuments(
             clickedIndex, criterion.start, criterion.end),
@@ -41,7 +43,19 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
                 body: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image(image: AssetImage(documents.getImagePath())),
+                    Container(
+                      width: 700,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: List<Widget>.generate(
+                          imagePaths.length,
+                          (index) => Flexible(
+                              fit: FlexFit.loose,
+                              child:
+                                  Image(image: AssetImage(imagePaths[index]))),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       width: 30,
                     ),

@@ -1,16 +1,19 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:me_office/modules/common/people.dart';
 import 'package:me_office/modules/find_by_document/criteria.dart';
 
 class Document {
   String title;
-  List<String> people;
+  List<People> people;
 
   Document(this.title, this.people);
 
   factory Document.fromJson(Map<String, dynamic> json) {
-    return Document(json['title'], List<String>.from(json['people']));
+    List<People> peopleList =
+        json['people'].map<People>((json) => People.fromJson(json)).toList();
+    return Document(json['title'], peopleList);
   }
 }
 
@@ -56,11 +59,15 @@ class Documents {
     return this.clicked == index;
   }
 
-  String getImagePath() {
+  List<String> getImagePaths() {
     if (this.clicked == -1) {
-      return 'images/seat_before_example.png';
+      return ['images/seat_before_example.png'];
     } else {
-      return 'images/seat_after_example.png';
+      return this
+          .documentsWithPeople[this.clicked]
+          .people
+          .map((e) => 'images/' + e.image)
+          .toList();
     }
   }
 }
