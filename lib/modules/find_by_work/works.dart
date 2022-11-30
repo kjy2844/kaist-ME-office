@@ -1,18 +1,18 @@
 import 'dart:convert';
-import 'package:me_office/modules/common/people.dart';
+import 'package:me_office/modules/common/person.dart';
 
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 
 class Work {
   String title;
-  List<People> people;
+  List<Person> people;
 
   Work(this.title, this.people);
 
   factory Work.fromJson(Map<String, dynamic> json) {
-    List<People> peopleList =
-        json['people'].map<People>((json) => People.fromJson(json)).toList();
+    List<Person> peopleList =
+        json['people'].map<Person>((json) => Person.fromJson(json)).toList();
     return Work(json['title'], peopleList);
   }
 }

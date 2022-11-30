@@ -29,55 +29,54 @@ class _FindByWorkState extends State<FindByWork> {
           } else {
             List<Work> data = snapshot.data ?? [];
             return Scaffold(
-                appBar: AppBar(
-                  title: Text('find by work page'),
-                ),
-                body: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 700,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: List<Widget>.generate(
-                          imagePaths.length,
-                          (index) => Flexible(
-                              fit: FlexFit.loose,
-                              child:
-                                  Image(image: AssetImage(imagePaths[index]))),
-                        ),
+              appBar: AppBar(
+                title: Text('find by work page'),
+              ),
+              body: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 700,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: List<Widget>.generate(
+                        imagePaths.length,
+                        (index) => Flexible(
+                            fit: FlexFit.loose,
+                            child: Image(image: AssetImage(imagePaths[index]))),
                       ),
                     ),
-                    SizedBox(
-                      width: 30,
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Container(
+                    width: 700,
+                    margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                    child: ListView.separated(
+                      scrollDirection: Axis.vertical,
+                      itemCount: data.length,
+                      itemBuilder: (context, index) {
+                        return BasicTile(
+                          title: data[index].title,
+                          color: works.isClicked(index)
+                              ? Colors.blue
+                              : Colors.white,
+                          click: () => setState(() {
+                            works.click(index);
+                          }),
+                        );
+                      },
+                      separatorBuilder: (context, index) {
+                        return SizedBox(
+                          height: 20,
+                        );
+                      },
                     ),
-                    Container(
-                      width: 700,
-                      margin:
-                          EdgeInsets.symmetric(vertical: 50, horizontal: 20),
-                      child: ListView.separated(
-                        scrollDirection: Axis.vertical,
-                        itemCount: data.length,
-                        itemBuilder: (context, index) {
-                          return BasicTile(
-                            title: data[index].title,
-                            color: works.isClicked(index)
-                                ? Colors.blue
-                                : Colors.white,
-                            click: () => setState(() {
-                              works.click(index);
-                            }),
-                          );
-                        },
-                        separatorBuilder: (context, index) {
-                          return SizedBox(
-                            height: 20,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ));
+                  ),
+                ],
+              ),
+            );
           }
         });
   }

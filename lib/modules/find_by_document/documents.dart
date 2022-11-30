@@ -1,18 +1,18 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:me_office/modules/common/people.dart';
+import 'package:me_office/modules/common/person.dart';
 import 'package:me_office/modules/find_by_document/criteria.dart';
 
 class Document {
   String title;
-  List<People> people;
+  List<Person> people;
 
   Document(this.title, this.people);
 
   factory Document.fromJson(Map<String, dynamic> json) {
-    List<People> peopleList =
-        json['people'].map<People>((json) => People.fromJson(json)).toList();
+    List<Person> peopleList =
+        json['people'].map<Person>((json) => Person.fromJson(json)).toList();
     return Document(json['title'], peopleList);
   }
 }
