@@ -17,6 +17,13 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
   // Future<List<Document>> documentsWithPeople = documents.getDocuments();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    documents.initialize();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final criteria = ModalRoute.of(context)!.settings.arguments as Criteria;
     int clickedIndex = criteria.clicked;

@@ -42,4 +42,8 @@ class Criteria {
   bool isClicked(int index) {
     return this.clicked == index;
   }
+
+  void initialize() {
+    this.clicked = -1;
+  }
 }

@@ -71,4 +71,8 @@ class Works {
           .toList();
     }
   }
+
+  void initialize() {
+    this.clicked = -1;
+  }
 }

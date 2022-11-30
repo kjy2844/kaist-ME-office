@@ -15,6 +15,13 @@ class _FindByDocumentState extends State<FindByDocument> {
   List<Criterion> criteriaList = criteria.getCriteria();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    criteria.initialize();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +48,12 @@ class _FindByDocumentState extends State<FindByDocument> {
                     });
                     // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
                     Navigator.pushNamed(context, '/find-by-document-detail',
-                        arguments: criteria);
+                            arguments: criteria)
+                        .then((_) {
+                      setState(() {
+                        criteria.initialize();
+                      });
+                    });
                   });
             },
           ),

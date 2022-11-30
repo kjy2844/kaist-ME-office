@@ -16,6 +16,13 @@ class _FindByWorkState extends State<FindByWork> {
   Future<List<Work>> worksWithPeople = works.getWorks();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    works.initialize();
+  }
+
+  @override
   Widget build(BuildContext context) {
     List<String> imagePaths = works.getImagePaths();
 

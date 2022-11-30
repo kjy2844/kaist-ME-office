@@ -70,4 +70,8 @@ class Documents {
           .toList();
     }
   }
+
+  void initialize() {
+    this.clicked = -1;
+  }
 }
