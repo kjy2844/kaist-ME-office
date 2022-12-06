@@ -3,17 +3,19 @@ import 'package:me_office/modules/common/person.dart';
 
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
+import '../common/language.dart';
 
 class Work {
-  String title;
+  String title_kor;
+  String title_eng;
   List<Person> people;
 
-  Work(this.title, this.people);
+  Work(this.title_kor, this.title_eng, this.people);
 
   factory Work.fromJson(Map<String, dynamic> json) {
     List<Person> peopleList =
         json['people'].map<Person>((json) => Person.fromJson(json)).toList();
-    return Work(json['title'], peopleList);
+    return Work(json['title_kor'], json['title_eng'], peopleList);
   }
 }
 
@@ -74,5 +76,15 @@ class Works {
 
   void initialize() {
     this.clicked = -1;
+  }
+
+  String getTitle(int index) {
+    if (Language.getCurLang() == LanguageType.Kor) {
+      return this.worksWithPeople[index].title_kor;
+    } else if (Language.getCurLang() == LanguageType.Eng) {
+      return this.worksWithPeople[index].title_eng;
+    } else {
+      return "";
+    }
   }
 }

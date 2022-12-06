@@ -79,7 +79,7 @@ class _FindByWorkState extends State<FindByWork> {
                           itemCount: data.length,
                           itemBuilder: (context, index) {
                             return BasicTile(
-                              title: data[index].title,
+                              title: works.getTitle(index),
                               color: works.isClicked(index)
                                   ? kaistBlue
                                   : Colors.white,

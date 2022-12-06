@@ -1,114 +1,141 @@
 [
   {
-    "title": "강의실 비품/주차시스템/우편물",
+    "title_kor": "강의실 비품/주차시스템/우편물",
+    "title_eng": "Classroom Fixtures/Parking System/Post",
     "people": [{"name": "조예솔", "image":  "cho_yesol.png"}]
   },
   {
-    "title": "고정자산",
+    "title_kor": "고정자산",
+    "title_eng": "Assets",
     "people": [{"name": "강성중", "image":  "kang_seongjung.png"},
       {"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
-    "title": "공동장비",
+    "title_kor": "공동장비",
+    "title_eng": "Equipments",
     "people": [{"name": "강성중", "image":  "kang_seongjung.png"},
       {"name": "여상은", "image":  "yeo_sangeun.png"}]
   },
   {
-    "title": "교과과정/수업/조교",
+    "title_kor": "교과과정/수업/조교",
+    "title_eng": "Curriculum/Class/TA",
     "people": [{"name": "구도영", "image":  "ku_doyoung.png"}]
   },
   {
-    "title": "교원인사",
+    "title_kor": "교원인사",
+    "title_eng": "Faculty Personnel",
     "people": [{"name": "김향미", "image":  "kim_hyangmi.png"}]
   },
   {
-    "title": "국제협력/복수학위",
+    "title_kor": "국제협력/복수학위",
+    "title_eng": "International Relations/Dual Degree",
     "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
-    "title": "기계 가공실(범용선반, 밀링, 드릴링 머신, 밴드쏘)",
+    "title_kor": "기계 가공실(범용선반, 밀링, 드릴링 머신, 밴드쏘)",
+    "title_eng": "Machine Shop\n(Lathe, Milling, Drilling Machine, Band Saw, 3D Printer)",
     "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
-    "title": "대학원 입시/박사자격시험",
+    "title_kor": "대학원 입시/박사자격시험",
+    "title_eng": "Graduate Admissions/Ph.D Qualifying Exam",
     "people": [{"name": "석은미", "image":  "seok_eunmi.png"}]
   },
   {
-    "title": "대학원 제작실(드릴링 머신, 3D 프린터)",
+    "title_kor": "대학원 제작실(드릴링 머신, 3D 프린터)",
+    "title_eng": "Graduates Making Room\n(Drilling Machine, 3D Printer)",
     "people": [{"name": "여상은", "image":  "yeo_sangeun.png"},
       {"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title": "산학협력",
+    "title_kor": "산학협력",
+    "title_eng": "Industry-Academic Cooperation",
     "people": [{"name": "박신애", "image":  "park_sinae.png"}]
   },
   {
-    "title": "석박사과정/학위논문",
+    "title_kor": "석박사과정/학위논문",
+    "title_eng": "Graduate Course/Thesis",
     "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
   {
-    "title": "시설(N25)",
+    "title_kor": "시설(N25)",
+    "title_eng": "Facility Maintenance(N25)",
     "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
-    "title": "시설(N7)",
+    "title_kor": "시설(N7)",
+    "title_eng": "Facility Maintenance(N7)",
     "people": [{"name": "여상은", "image":  "yeo_sangeun.png"},
       {"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title": "시설(N9)",
+    "title_kor": "시설(N9)",
+    "title_eng": "Facility Maintenance(N9)",
     "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
-    "title": "연구비",
+    "title_kor": "연구비",
+    "title_eng": "Research Expenses",
     "people": [{"name": "김단희", "image":  "kim_danhee.png"}]
   },
   {
-    "title": "연구실 안전관리",
+    "title_kor": "연구실 안전관리",
+    "title_eng": "Laboratory Safety",
     "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title": "출장/카드키/세미나실",
+    "title_kor": "출장/카드키/세미나실",
+    "title_eng": "Business Trip/Card Key/Seminar Room",
     "people": [{"name": "임수지", "image":  "lim_suji.png"}]
   },
   {
-    "title": "학부 제작실(소형선반, 밀링, 드릴링 머신, 밴드쏘)",
+    "title_kor": "학부 제작실(소형선반, 밀링, 드릴링 머신, 밴드쏘)",
+    "title_eng": "Undergraduates Making Room\n(Small Lathe, Milling, Drilling Machine, Band Saw)",
     "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
-    "title": "학부실험실습(기계가공, 기계공학실험)",
+    "title_kor": "학부실험실습(기계가공, 기계공학실험)",
+    "title_eng": "<Undergraduate Practice>\nBasic Mechanical Practice (ME200) : Machining Practice\nMechanical Engineering Laboratory(ME303)",
     "people": [{"name": "강성중", "image":  "kang_seongjung.png"}]
   },
   {
-    "title": "학부실험실습(기계제도)",
+    "title_kor": "학부실험실습(기계제도)",
+    "title_eng": "<Undergraduate Practice>\nBasic Mechanical Practice (ME200) : Design Practice",
     "people": [{"name": "여상은", "image":  "yeo_sangeun.png"}]
   },
   {
-    "title": "학부실험실습(자동제어, 시모제)",
+    "title_kor": "학부실험실습(자동제어, 시모제)",
+    "title_eng": "<Undergraduate Practice>\nAutomatic Control(ME460)\nModeling and Control of Engineering Systems(ME360)",
     "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title": "학부실험실습(창시구, 공학설계메카, 응용전자공학)",
+    "title_kor": "학부실험실습(창시구, 공학설계메카, 응용전자공학)",
+    "title_eng": "Undergraduates Making Room\n(Small Lathe, Milling, Drilling Machine, Band Saw)",
     "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
-    "title": "학사과정/학생포상/장학/별정직",
+    "title_kor": "학사과정/학생포상/장학/별정직",
+    "title_eng": "Undergraduate Course/Student Awards/Scholarship/Contract Employees",
     "people": [{"name": "백수경", "image":  "baek_sukyoung.png"}]
   },
   {
-    "title": "홍보",
+    "title_kor": "홍보",
+    "title_eng": "Public Relations",
     "people": [{"name": "정효윤", "image":  "jung_hyoyoon.png"}]
   },
   {
-    "title": "3D 프린터 및 레이저 가공실",
+    "title_kor": "3D 프린터 및 레이저 가공실",
+    "title_eng": "3D Printing, Laser Processing Room",
     "people": [{"name": "주정만", "image":  "joo_jeongman.png"}]
   },
   {
-    "title": "A/V System",
+    "title_kor": "A/V System",
+    "title_eng": "A/V System",
     "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title": "BK21/전문연구요원",
+    "title_kor": "BK21/전문연구요원",
+    "title_eng": "BK21/Expert Research Personnel",
     "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   }
 ]

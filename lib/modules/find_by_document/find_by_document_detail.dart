@@ -27,9 +27,8 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
 
   @override
   Widget build(BuildContext context) {
-    final criteria = ModalRoute.of(context)!.settings.arguments as Criteria;
-    int clickedIndex = criteria.clicked;
-    Criterion criterion = criteria.getCriterion(clickedIndex);
+    int clickedIndex = Criteria.getClicked();
+    Criterion criterion = Criteria.getCriterion(clickedIndex);
     String clickedLabel = criterion.title;
 
     List<String> imagePaths = documents.getImagePaths();
@@ -87,7 +86,7 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
                             itemCount: data.length,
                             itemBuilder: (context, index) {
                               return BasicTile(
-                                title: data[index].title,
+                                title: documents.getTitle(index),
                                 color: documents.isClicked(index)
                                     ? kaistBlue
                                     : Colors.white,

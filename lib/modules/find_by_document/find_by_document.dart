@@ -4,8 +4,6 @@ import 'package:me_office/modules/common/constants.dart';
 import 'package:me_office/modules/find_by_document/criteria.dart';
 import '../common/common_app_bar.dart';
 
-Criteria criteria = Criteria();
-
 class FindByDocument extends StatefulWidget {
   const FindByDocument({Key? key}) : super(key: key);
 
@@ -14,13 +12,13 @@ class FindByDocument extends StatefulWidget {
 }
 
 class _FindByDocumentState extends State<FindByDocument> {
-  List<Criterion> criteriaList = criteria.getCriteria();
+  List<Criterion> criteriaList = Criteria.getCriteria();
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    criteria.initialize();
+    Criteria.initialize();
   }
 
   @override
@@ -55,20 +53,19 @@ class _FindByDocumentState extends State<FindByDocument> {
                   return BasicTile(
                       title: criteriaList[index].title,
                       color:
-                          criteria.isClicked(index) ? kaistBlue : Colors.white,
-                      fontColor: criteria.isClicked(index)
+                          Criteria.isClicked(index) ? kaistBlue : Colors.white,
+                      fontColor: Criteria.isClicked(index)
                           ? Colors.white
                           : Colors.black,
                       click: () {
                         setState(() {
-                          criteria.click(index);
+                          Criteria.click(index);
                         });
                         // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
-                        Navigator.pushNamed(context, '/find-by-document-detail',
-                                arguments: criteria)
+                        Navigator.pushNamed(context, '/find-by-document-detail')
                             .then((_) {
                           setState(() {
-                            criteria.initialize();
+                            Criteria.initialize();
                           });
                         });
                       });
