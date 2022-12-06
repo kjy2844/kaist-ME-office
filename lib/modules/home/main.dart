@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:me_office/modules/common/constants.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+import '../common/common_app_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,8 +13,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    FirebaseFirestore firestore = FirebaseFirestore.instance;
-    CollectionReference works = firestore.collection('works');
+    // FirebaseFirestore firestore = FirebaseFirestore.instance;
+    // CollectionReference works = firestore.collection('works');
 
     // return FutureBuilder<DocumentSnapshot>(
     //   future: works.doc('XwzIaQVndvkRLUwfXLoc').get(),
@@ -36,24 +38,79 @@ class _HomeState extends State<Home> {
     //   },
     // );
     return Scaffold(
-      appBar: AppBar(
-        title: Text('home page'),
-      ),
+      appBar: CommonAppBar(),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Stack(
+          alignment: Alignment.centerLeft,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/find-by-work');
-              },
-              child: const Text('Find By Work!'),
+            Container(
+              height: 800,
+              width: 600,
+              // color: kaistBlue,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage('images/kaist_night.png'),
+              )),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/find-by-document');
-              },
-              child: const Text('Find By Document!'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/find-by-work');
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white, fixedSize: Size(520, 460)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 40.0),
+                        child: Icon(
+                          Icons.people_outline,
+                          color: kaistBlue,
+                          size: 130,
+                        ),
+                      ),
+                      const Text(
+                        '업무별 담당자 찾기',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: kaistBlue,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/find-by-document');
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: kaistBlue, fixedSize: Size(520, 460)),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 40.0),
+                        child: Icon(
+                          Icons.article_outlined,
+                          color: Colors.white,
+                          size: 130,
+                        ),
+                      ),
+                      const Text(
+                        '제출 서류별 담당자 찾기',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),

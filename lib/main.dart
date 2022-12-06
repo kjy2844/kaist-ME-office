@@ -28,10 +28,20 @@ class Main extends StatelessWidget {
         '/find-by-document-detail': (context) => const FindByDocumentDetail(),
       },
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: Colors.black,
         ),
-        textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.black)),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          elevation: 0.0,
+          foregroundColor: Colors.black,
+        ),
       ),
     );
   }

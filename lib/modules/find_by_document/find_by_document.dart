@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:me_office/modules/common/basic_tile.dart';
+import 'package:me_office/modules/common/constants.dart';
 import 'package:me_office/modules/find_by_document/criteria.dart';
+import '../common/common_app_bar.dart';
 
 Criteria criteria = Criteria();
 
@@ -24,40 +26,57 @@ class _FindByDocumentState extends State<FindByDocument> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('find by document page'),
-      ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.all(90.0),
-          child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              mainAxisExtent: 150,
-              mainAxisSpacing: 30,
-              crossAxisSpacing: 20,
+      appBar: CommonAppBar(),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                '제출 서류별 담당자 찾기',
+                style: TextStyle(fontSize: 48),
+              ),
             ),
-            itemCount: criteriaList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return BasicTile(
-                  title: criteriaList[index].title,
-                  color: criteria.isClicked(index) ? Colors.blue : Colors.white,
-                  click: () {
-                    setState(() {
-                      criteria.click(index);
-                    });
-                    // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
-                    Navigator.pushNamed(context, '/find-by-document-detail',
-                            arguments: criteria)
-                        .then((_) {
-                      setState(() {
-                        criteria.initialize();
-                      });
-                    });
-                  });
-            },
           ),
-        ),
+          Center(
+            child: Container(
+              height: 800,
+              width: 1400,
+              padding: EdgeInsets.all(90.0),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisExtent: 150,
+                  mainAxisSpacing: 30,
+                  crossAxisSpacing: 20,
+                ),
+                itemCount: criteriaList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return BasicTile(
+                      title: criteriaList[index].title,
+                      color:
+                          criteria.isClicked(index) ? kaistBlue : Colors.white,
+                      fontColor: criteria.isClicked(index)
+                          ? Colors.white
+                          : Colors.black,
+                      click: () {
+                        setState(() {
+                          criteria.click(index);
+                        });
+                        // TODO: detail page에 선택한 criteria 전달? 혹은 criteria에 맞춰서 detail에 뜰 document list 받아오기
+                        Navigator.pushNamed(context, '/find-by-document-detail',
+                                arguments: criteria)
+                            .then((_) {
+                          setState(() {
+                            criteria.initialize();
+                          });
+                        });
+                      });
+                },
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

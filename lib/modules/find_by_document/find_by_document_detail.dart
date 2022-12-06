@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:me_office/modules/common/common_app_bar.dart';
+import 'package:me_office/modules/common/constants.dart';
 import 'package:me_office/modules/find_by_document/criteria.dart';
 import './documents.dart';
 import '../common/basic_tile.dart';
@@ -44,52 +46,67 @@ class _FindByDocumentDetailState extends State<FindByDocumentDetail> {
             List<Document> data = snapshot.data ?? [];
 
             return Scaffold(
-                appBar: AppBar(
-                  title: Text('find by work page $clickedLabel'),
-                ),
-                body: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                appBar: CommonAppBar(),
+                body: Column(
                   children: [
-                    Container(
-                      width: 700,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: List<Widget>.generate(
-                          imagePaths.length,
-                          (index) => Flexible(
-                              fit: FlexFit.loose,
-                              child:
-                                  Image(image: AssetImage(imagePaths[index]))),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: Text(
+                          '제출 서류별 담당자 찾기($clickedLabel)',
+                          style: TextStyle(fontSize: 48),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      width: 700,
-                      margin:
-                          EdgeInsets.symmetric(vertical: 50, horizontal: 20),
-                      child: ListView.separated(
-                        scrollDirection: Axis.vertical,
-                        itemCount: data.length,
-                        itemBuilder: (context, index) {
-                          return BasicTile(
-                            title: data[index].title,
-                            color: documents.isClicked(index)
-                                ? Colors.blue
-                                : Colors.white,
-                            click: () => setState(() {
-                              documents.click(index);
-                            }),
-                          );
-                        },
-                        separatorBuilder: (context, index) {
-                          return SizedBox(
-                            height: 20,
-                          );
-                        },
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 700,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: List<Widget>.generate(
+                              imagePaths.length,
+                              (index) => Flexible(
+                                  fit: FlexFit.loose,
+                                  child: Image(
+                                      image: AssetImage(imagePaths[index]))),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Container(
+                          width: 700,
+                          height: 800,
+                          margin: EdgeInsets.symmetric(
+                              vertical: 50, horizontal: 20),
+                          child: ListView.separated(
+                            scrollDirection: Axis.vertical,
+                            itemCount: data.length,
+                            itemBuilder: (context, index) {
+                              return BasicTile(
+                                title: data[index].title,
+                                color: documents.isClicked(index)
+                                    ? kaistBlue
+                                    : Colors.white,
+                                fontColor: documents.isClicked(index)
+                                    ? Colors.white
+                                    : Colors.black,
+                                click: () => setState(() {
+                                  documents.click(index);
+                                }),
+                              );
+                            },
+                            separatorBuilder: (context, index) {
+                              return SizedBox(
+                                height: 20,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ));

@@ -5,11 +5,13 @@ class BasicTile extends StatefulWidget {
     Key? key,
     required this.title,
     required this.color,
+    required this.fontColor,
     required this.click,
   }) : super(key: key);
 
   final String title;
   final Color color;
+  final Color fontColor;
   final Function click;
 
   @override
@@ -49,7 +51,10 @@ class _BasicTileState extends State<BasicTile> {
         ),
         child: Text(
           widget.title,
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(
+            fontSize: 24,
+            color: widget.fontColor,
+          ),
         ),
       ),
     );
