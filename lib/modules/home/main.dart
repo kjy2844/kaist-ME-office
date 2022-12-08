@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('images/kaist_night.png'),
+                image: AssetImage('assets/images/kaist_night.png'),
               )),
             ),
             Row(

@@ -41,7 +41,8 @@ class Works {
   // }
 
   Future<List<Work>> getWorks() async {
-    final String response = await rootBundle.loadString('json/works_data.json');
+    final String response =
+        await rootBundle.loadString('assets/json/works_data.json');
     final data = json.decode(response).cast<Map<String, dynamic>>();
 
     this.worksWithPeople =
@@ -64,12 +65,12 @@ class Works {
 
   List<String> getImagePaths() {
     if (this.clicked == -1) {
-      return ['images/seat_before_example.png'];
+      return ['assets/images/seat_before_example.png'];
     } else {
       return this
           .worksWithPeople[this.clicked]
           .people
-          .map((e) => 'images/' + e.image)
+          .map((e) => 'assets/images/' + e.image)
           .toList();
     }
   }

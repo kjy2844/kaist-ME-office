@@ -22,7 +22,7 @@ class _CommonAppBarState extends State<CommonAppBar> {
     return AppBar(
       // title: Text('home page'),
       title: Image(
-        image: AssetImage('images/ME_logo_Kor.png'),
+        image: AssetImage('assets/images/ME_logo_Kor.png'),
         height: 50.0,
       ),
       // leadingWidth: 200.0,

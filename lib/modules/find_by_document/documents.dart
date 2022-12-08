@@ -28,7 +28,7 @@ class Documents {
   Future<List<Document>> getDocuments(
       int index, String start, String end) async {
     final String response =
-        await rootBundle.loadString('json/documents_data.json');
+        await rootBundle.loadString('assets/json/documents_data.json');
     final data = json.decode(response).cast<Map<String, dynamic>>();
 
     if (Language.getCurLang() == LanguageType.Kor) {
@@ -82,12 +82,12 @@ class Documents {
 
   List<String> getImagePaths() {
     if (this.clicked == -1) {
-      return ['images/seat_before_example.png'];
+      return ['assets/images/seat_before_example.png'];
     } else {
       return this
           .documentsWithPeople[this.clicked]
           .people
-          .map((e) => 'images/' + e.image)
+          .map((e) => 'assets/images/' + e.image)
           .toList();
     }
   }
