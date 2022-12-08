@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:me_office/modules/common/common_app_bar.dart';
+import 'package:me_office/modules/common/common_text.dart';
 import 'package:me_office/modules/common/constants.dart';
 import './works.dart';
 import '../common/basic_tile.dart';
@@ -26,6 +27,12 @@ class _FindByWorkState extends State<FindByWork> {
 
   @override
   Widget build(BuildContext context) {
+    final data = MediaQuery.of(context);
+    final screenHeight = data.size.height;
+    final screenWidth = data.size.width;
+
+    final halfWidth = screenWidth * 0.4;
+
     List<String> imagePaths = works.getImagePaths();
 
     return FutureBuilder(
@@ -45,17 +52,20 @@ class _FindByWorkState extends State<FindByWork> {
                     padding: const EdgeInsets.all(8.0),
                     child: Center(
                       child: Text(
-                        '업무별 담당자 찾기',
-                        style: TextStyle(fontSize: 48),
+                        find_a_contact_by_task.getString(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 25),
                       ),
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        width: 700,
+                        width: halfWidth,
+                        height: screenHeight * 0.7,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           mainAxisSize: MainAxisSize.min,
                           children: List<Widget>.generate(
                             imagePaths.length,
@@ -66,14 +76,11 @@ class _FindByWorkState extends State<FindByWork> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 30,
-                      ),
                       Container(
-                        width: 700,
-                        height: 800,
+                        width: halfWidth,
+                        height: screenHeight * 0.7,
                         margin:
-                            EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                            EdgeInsets.symmetric(vertical: 30, horizontal: 20),
                         child: ListView.separated(
                           scrollDirection: Axis.vertical,
                           itemCount: data.length,
@@ -93,7 +100,7 @@ class _FindByWorkState extends State<FindByWork> {
                           },
                           separatorBuilder: (context, index) {
                             return SizedBox(
-                              height: 20,
+                              height: screenHeight * 0.01,
                             );
                           },
                         ),

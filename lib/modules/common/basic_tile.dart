@@ -21,6 +21,13 @@ class BasicTile extends StatefulWidget {
 class _BasicTileState extends State<BasicTile> {
   @override
   Widget build(BuildContext context) {
+    final data = MediaQuery.of(context);
+    final screenHeight = data.size.height;
+    final screenWidth = data.size.width;
+
+    final tileHeight = screenHeight * 0.05;
+    final tileWidth = screenWidth * 0.8;
+
     return InkWell(
       onTap: () {
         setState(() {
@@ -29,8 +36,6 @@ class _BasicTileState extends State<BasicTile> {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 59,
-        width: 479,
         decoration: BoxDecoration(
           color: widget.color,
           border: Border.all(
@@ -49,11 +54,15 @@ class _BasicTileState extends State<BasicTile> {
             )
           ],
         ),
-        child: Text(
-          widget.title,
-          style: TextStyle(
-            fontSize: 24,
-            color: widget.fontColor,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 6.0),
+          child: Text(
+            widget.title,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 15,
+              color: widget.fontColor,
+            ),
           ),
         ),
       ),

@@ -9,7 +9,7 @@ class CommonAppBar extends StatefulWidget implements PreferredSizeWidget {
   State<CommonAppBar> createState() => _CommonAppBarState();
 
   @override
-  Size get preferredSize => Size.fromHeight(60.0);
+  Size get preferredSize => Size.fromHeight(40.0);
 }
 
 class _CommonAppBarState extends State<CommonAppBar> {
@@ -19,18 +19,25 @@ class _CommonAppBarState extends State<CommonAppBar> {
 
   @override
   Widget build(BuildContext context) {
+    LanguageType curLangType = (Language.curLang == LanguageType.Kor)
+        ? LanguageType.Eng
+        : LanguageType.Kor;
+
     return AppBar(
-      // title: Text('home page'),
-      title: Image(
-        image: AssetImage('assets/images/ME_logo_Kor.png'),
-        height: 50.0,
+      title: InkWell(
+        onTap: () =>
+            {Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false)},
+        child: Image(
+          image: AssetImage('assets/images/ME_logo_Kor.png'),
+          height: 35.0,
+        ),
       ),
       // leadingWidth: 200.0,
       actions: [
         ElevatedButton(
           child: Text(
-            'KOR',
-            style: TextStyle(fontSize: 40),
+            curLangType.name,
+            style: TextStyle(fontSize: 20),
           ),
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
@@ -40,37 +47,36 @@ class _CommonAppBarState extends State<CommonAppBar> {
             elevation: 0.0,
             shadowColor: Colors.transparent,
           ),
-          onPressed: isDisabled(LanguageType.Kor)
-              ? null
-              : () {
-                  setState(() {
-                    Language.setCurLang(LanguageType.Kor);
-                  });
-                  Navigator.pushNamed(context, '/');
-                },
+          onPressed: () {
+            setState(() {
+              Language.setCurLang(curLangType);
+            });
+            Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+          },
         ),
-        ElevatedButton(
-          child: Text(
-            'ENG',
-            style: TextStyle(fontSize: 40),
-          ),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-            foregroundColor: kaistBlue,
-            disabledForegroundColor: Colors.grey,
-            disabledBackgroundColor: Colors.white,
-            elevation: 0.0,
-            shadowColor: Colors.transparent,
-          ),
-          onPressed: isDisabled(LanguageType.Eng)
-              ? null
-              : () {
-                  setState(() {
-                    Language.setCurLang(LanguageType.Eng);
-                  });
-                  Navigator.pushNamed(context, '/');
-                },
-        ),
+        // ElevatedButton(
+        //   child: Text(
+        //     'ENG',
+        //     style: TextStyle(fontSize: 20),
+        //   ),
+        //   style: ElevatedButton.styleFrom(
+        //     backgroundColor: Colors.white,
+        //     foregroundColor: kaistBlue,
+        //     disabledForegroundColor: Colors.grey,
+        //     disabledBackgroundColor: Colors.white,
+        //     elevation: 0.0,
+        //     shadowColor: Colors.transparent,
+        //   ),
+        //   onPressed: isDisabled(LanguageType.Eng)
+        //       ? null
+        //       : () {
+        //           setState(() {
+        //             Language.setCurLang(LanguageType.Eng);
+        //           });
+        //           Navigator.pushNamedAndRemoveUntil(
+        //               context, '/', (route) => false);
+        //         },
+        // ),
       ],
     );
   }

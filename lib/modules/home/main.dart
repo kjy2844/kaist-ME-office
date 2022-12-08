@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:me_office/modules/common/constants.dart';
-// import 'package:cloud_firestore/cloud_firestore.dart';
 import '../common/common_app_bar.dart';
+import '../common/common_text.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,30 +13,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    // FirebaseFirestore firestore = FirebaseFirestore.instance;
-    // CollectionReference works = firestore.collection('works');
+    final data = MediaQuery.of(context);
+    final screenHeight = data.size.height;
+    final screenWidth = data.size.width;
 
-    // return FutureBuilder<DocumentSnapshot>(
-    //   future: works.doc('XwzIaQVndvkRLUwfXLoc').get(),
-    //   builder:
-    //       (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
-    //     if (snapshot.hasError) {
-    //       return Text("Something went wrong");
-    //     }
-    //
-    //     if (snapshot.hasData && !snapshot.data!.exists) {
-    //       return Text("Document does not exist");
-    //     }
-    //
-    //     if (snapshot.connectionState == ConnectionState.done) {
-    //       Map<String, dynamic> data =
-    //           snapshot.data!.data() as Map<String, dynamic>;
-    //       return Text("${data}");
-    //     }
-    //
-    //     return Text("loading");
-    //   },
-    // );
+    final boxHeight = screenHeight * 0.55;
+    final boxWidth = screenHeight * 0.5;
+    final iconSize = boxWidth * 0.3;
+    final intervalSize = boxHeight * 0.1;
+
     return Scaffold(
       appBar: CommonAppBar(),
       body: Center(
@@ -44,9 +29,8 @@ class _HomeState extends State<Home> {
           alignment: Alignment.centerLeft,
           children: [
             Container(
-              height: 800,
-              width: 600,
-              // color: kaistBlue,
+              height: screenHeight * 0.7,
+              width: screenWidth * 0.3,
               decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.cover,
@@ -61,22 +45,25 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/find-by-work');
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white, fixedSize: Size(520, 460)),
+                    backgroundColor: Colors.white,
+                    fixedSize: Size(boxHeight, boxWidth),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 40.0),
-                        child: Icon(
-                          Icons.people_outline,
-                          color: kaistBlue,
-                          size: 130,
-                        ),
+                      Icon(
+                        Icons.people_outline,
+                        color: kaistBlue,
+                        size: iconSize,
                       ),
-                      const Text(
-                        '업무별 담당자 찾기',
+                      SizedBox(
+                        height: intervalSize,
+                      ),
+                      Text(
+                        find_a_contact_by_task.getString(),
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 25,
                           color: kaistBlue,
                         ),
                       ),
@@ -88,22 +75,25 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/find-by-document');
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: kaistBlue, fixedSize: Size(520, 460)),
+                    backgroundColor: kaistBlue,
+                    fixedSize: Size(boxHeight, boxWidth),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 40.0),
-                        child: Icon(
-                          Icons.article_outlined,
-                          color: Colors.white,
-                          size: 130,
-                        ),
+                      Icon(
+                        Icons.article_outlined,
+                        color: Colors.white,
+                        size: iconSize,
                       ),
-                      const Text(
-                        '제출 서류별 담당자 찾기',
+                      SizedBox(
+                        height: intervalSize,
+                      ),
+                      Text(
+                        find_a_contact_by_submission_document.getString(),
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 25,
                           color: Colors.white,
                         ),
                       ),
