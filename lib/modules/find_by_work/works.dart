@@ -48,6 +48,12 @@ class Works {
     this.worksWithPeople =
         data.map<Work>((json) => Work.fromJson(json)).toList();
 
+    if (Language.curLang == LanguageType.Kor) {
+      this.worksWithPeople.sort((a, b) => a.title_kor.compareTo(b.title_kor));
+    } else if (Language.curLang == LanguageType.Eng) {
+      this.worksWithPeople.sort((a, b) => a.title_eng.compareTo(b.title_eng));
+    }
+
     return this.worksWithPeople;
   }
 

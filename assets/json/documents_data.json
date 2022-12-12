@@ -227,12 +227,12 @@
   {
     "title_kor": "세미나개최보고서(BK21)",
     "title_eng": "Seminar holding report (BK)",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "세미나개최신청서(BK21)",
     "title_eng": "Seminar application form (BK)",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "시설사용 신청서",
@@ -282,12 +282,12 @@
   {
     "title_kor": "장/단기해외연수 결과보고서",
     "title_eng": "Long/Short-Term Overseas Training Result Report",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "장/단기해외연수 신청서",
     "title_eng": "Application for long/short-term overseas training",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "재입학원",
@@ -302,12 +302,12 @@
   {
     "title_kor": "전문가활용보고서(BK21)",
     "title_eng": "Expert Utilization Report (BK)",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "전문가활용신청서(BK21)",
     "title_eng": "Expert Utilization Application (BK)",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor": "전문연구요원 서류",
@@ -365,7 +365,7 @@
   "people": [{"name": "범진웅", "image":  "beom_jinwoong.png"}]
   },
   {
-    "title_kor": "학생 과외활동 신청서",
+    "title_kor": "학생 영리활동 신청서",
     "title_eng": "Application for Student For-Profit Activities of Students",
   "people": [{"name": "이동현", "image":  "lee_donghyun.png"}]
   },
@@ -382,7 +382,7 @@
   {
     "title_kor": "BK국내특허 출원(등록) 신청서",
     "title_eng": "BK domestic patent application (registration)",
-  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
+  "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
   },
   {
     "title_kor" : "KAIST 외국협력대학 파견학생 서약서",

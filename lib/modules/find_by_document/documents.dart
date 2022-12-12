@@ -47,22 +47,19 @@ class Documents {
                 end.compareTo(element.title_kor[0]) >= 0)
             .toList();
       }
+      this
+          .documentsWithPeople
+          .sort((a, b) => a.title_kor.compareTo(b.title_kor));
     } else if (Language.getCurLang() == LanguageType.Eng) {
-      if (index == 7) {
-        this.documentsWithPeople = data
-            .map<Document>((json) => Document.fromJson(json))
-            .where((element) =>
-                start.compareTo(element.title_eng[0]) > 0 ||
-                end.compareTo(element.title_eng[0]) < 0)
-            .toList();
-      } else {
-        this.documentsWithPeople = data
-            .map<Document>((json) => Document.fromJson(json))
-            .where((element) =>
-                start.compareTo(element.title_eng[0]) <= 0 &&
-                end.compareTo(element.title_eng[0]) >= 0)
-            .toList();
-      }
+      this.documentsWithPeople = data
+          .map<Document>((json) => Document.fromJson(json))
+          .where((element) =>
+              start.compareTo(element.title_eng[0]) <= 0 &&
+              end.compareTo(element.title_eng[0]) >= 0)
+          .toList();
+      this
+          .documentsWithPeople
+          .sort((a, b) => a.title_eng.compareTo(b.title_eng));
     }
 
     return this.documentsWithPeople;

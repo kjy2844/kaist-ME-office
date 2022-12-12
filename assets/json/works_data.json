@@ -134,8 +134,13 @@
     "people": [{"name": "한동희", "image":  "han_donghee.png"}]
   },
   {
-    "title_kor": "BK21/전문연구요원",
-    "title_eng": "BK21/Expert Research Personnel",
+    "title_kor": "BK21",
+    "title_eng": "BK21",
+    "people": [{"name": "박은혜", "image":  "park_eunhye.png"}, {"name": "김가희", "image":  "kim_kahee.png"}]
+  },
+  {
+    "title_kor": "전문연구요원",
+    "title_eng": "Expert Research Personnel",
     "people": [{"name": "박은혜", "image":  "park_eunhye.png"}]
   }
 ]
